@@ -253,3 +253,44 @@ audio {
     font-size: 16px;
   }
 }
+.footer {
+  background-color: rgba(255, 192, 203, 0.3); /* rosa suave transparente */
+  padding: 30px 10px;
+  text-align: center;
+  font-family: 'Segoe Script', cursive;
+  color: #c22c7d;
+  border-top: 2px dashed #ff69b4;
+  margin-top: 40px;
+}
+
+.footer p {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.social-icons {
+  margin: 10px 0;
+}
+
+.social-icons a {
+  color: #c22c7d;
+  font-size: 28px;
+  margin: 0 15px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ff1493;
+  transform: scale(1.2);
+}
+
+@media (max-width: 600px) {
+  .footer p {
+    font-size: 16px;
+  }
+
+  .social-icons a {
+    font-size: 24px;
+    margin: 0 10px;
+  }
+}
