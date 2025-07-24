@@ -12,6 +12,13 @@
 </head>
 
 <body>
+
+  <div id="pantalla-inicio">
+    <h1>¡Bienvenidos!</h1>
+    <p>Estás invitado a una fiesta muy especial...</p>
+    <button id="btn-entrar">Entrar a la fiesta</button>
+  </div>
+
   <div class="contenedor">
 
     <!-- 🌸 1. Portada con fondo, título y subtítulo -->
@@ -24,10 +31,10 @@ Te espero para compartir un lindo momento, buena charla y algo rico!</p>
 
     <!-- 🎵 2. Reproductor de música -->
     <section class="musica">
-      <audio controls autoplay loop>
+      <audio  id="audio" autoplay loop>
         <source src="sound/TRAVIS THOMPSON - NEED YOU - Kinda Neat.mp3" type="audio/mpeg" />
-        Tu navegador no soporta el reproductor.
       </audio>
+      <button id="playPauseBtn">🎵 Música</button>
     </section>
 
     <!-- ⏳ 3. Cuenta regresiva -->

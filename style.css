@@ -82,13 +82,28 @@ audio {
 /* ------------------------------------
 📍 UBICACIÓN - MAPA
 ------------------------------------ */
+.ubicacion {
+  text-align: center;
+  margin: 40px 0;
+}
+
 .mapa-decorado {
   border: 5px solid #ff69b4;
   padding: 10px;
   border-radius: 20px;
   background: #fefefe;
-  display: inline-block;
+  display: block;
+  max-width: 90%;
+  margin: 0 auto 20px auto;
 }
+
+.mapa-decorado iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 15px;
+}
+
 
 /* ------------------------------------
 🎁 BOTÓN GENÉRICO
@@ -293,4 +308,50 @@ audio {
     font-size: 24px;
     margin: 0 10px;
   }
+}
+
+#playPauseBtn {
+  background-color: #ff6da0; /* rosa claro */
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #f7a3c4;
+  cursor: pointer;
+  transition: 0.3s ease;
+  width: 200px;
+  height: 50px;
+}
+#playPauseBtn:hover {
+  background-color: #f8a4c0;
+}
+
+#pantalla-inicio {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffe4ec;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 9999;
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+}
+
+#btn-entrar {
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #ffb6c1;
 }

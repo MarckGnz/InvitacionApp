@@ -73,3 +73,24 @@ prevBtn?.addEventListener('click', () => {
 function updateCarousel() {
   carousel.style.transform = `translateX(-${index * 100}%)`;
 }
+
+const audio = document.getElementById("audio");
+const btn = document.getElementById("playPauseBtn");
+
+btn.addEventListener("click", () => {
+  if (audio.paused) {
+    audio.play();
+    btn.textContent = "⏸️ Pausar música";
+  } else {
+    audio.pause();
+    btn.textContent = "▶️ Reproducir música";
+  }
+});
+
+document.getElementById("btn-entrar").addEventListener("click", () => {
+  document.getElementById("pantalla-inicio").style.display = "none";
+  document.getElementById("contenido").style.display = "block";
+
+  const musica = document.getElementById("musica");
+  musica.play();
+});
