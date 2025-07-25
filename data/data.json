@@ -1,0 +1,15 @@
+{
+  "florencia": {
+    "nombre": "Florencia",
+    "evento": "Mis XV",
+    "mensaje": "¡Este año quiero celebrar mi cumpleaños rodeado de la gente que más quiero, y vos sos parte de eso. Te espero para compartir un lindo momento, buena charla y algo rico!",
+    "color": "#fbeffb"
+  },
+  "santiago": {
+    "nombre": "Santiago",
+    "evento": "Mis 18",
+    "mensaje": "¡Estás invitado a celebrar mi cumpleaños número 18! No faltes, va a estar buenísimo.",
+    "color": "#e0f7fa"
+  }
+}
+

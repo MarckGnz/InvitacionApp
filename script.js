@@ -94,3 +94,36 @@ document.getElementById("btn-entrar").addEventListener("click", () => {
   const musica = document.getElementById("musica");
   musica.play();
 });
+
+// Variante Json
+
+function getParams() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get('cliente');
+}
+
+window.onload = () => {
+  const cliente = getParams();
+
+  fetch('data/data.json') // o 'data.json' si está en la raíz
+    .then(response => response.json())
+    .then(clientes => {
+      if (cliente && clientes[cliente]) {
+        const datos = clientes[cliente];
+        document.getElementById("titulo").textContent = datos.titulo;
+        document.getElementById("mensaje").textContent = datos.mensaje;
+        document.getElementById("fecha").textContent = datos.fecha;
+        document.body.style.backgroundColor = datos.color;
+      } else {
+        document.getElementById("titulo").textContent = "Invitación no encontrada";
+        document.getElementById("mensaje").textContent = "Verificá el enlace o consultá al organizador.";
+        document.getElementById("fecha").textContent = "";
+        document.body.style.backgroundColor = "#eee";
+      }
+    })
+    .catch(error => {
+      console.error("Error al cargar los datos:", error);
+      document.getElementById("titulo").textContent = "Error de carga";
+      document.getElementById("mensaje").textContent = "No se pudieron obtener los datos.";
+    });
+};
